@@ -1,4 +1,4 @@
-# 🎵 Playlist_Music
+# PROJECT PORTFOLIO
 
 This is my **PROJECT PORTFOLIO**, created using HTML, CSS, and JavaScript.  
 All files are organized inside one folder, and the main entry file is **`Main.html`**.
