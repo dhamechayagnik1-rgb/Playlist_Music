@@ -1,0 +1,28 @@
+aside a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  
+  width: 170px;
+  height: 20px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out; /* 👈 transition यहाँ लगाना जरूरी है */
+}
+
+aside img {
+  width: 20px;
+}
+
+aside a:hover {
+  background-color: rgb(215, 34, 134);
+  width: 170px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 20px;
+  word-spacing: 2px;
+}

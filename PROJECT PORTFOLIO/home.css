@@ -1,0 +1,31 @@
+.search-container img{
+    position: absolute;
+   z-index: 11111;
+   margin-top: 3px;
+   margin-left: 5px;
+   width: 30px;
+   
+   
+    
+}
+.search-container input{
+    background-color: rgba(83, 81, 79, 0.508);
+    outline: none;
+    border: none;
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    color: aliceblue;
+    font-size: 15px;
+    padding: 0  0 0 14% ;
+    
+}
+
+.search-container input::placeholder{
+   
+   color: rgb(94, 95, 96);
+}
+
+.search-container input:focus {
+    border: 2px solid rgb(255, 255, 255);
+}
