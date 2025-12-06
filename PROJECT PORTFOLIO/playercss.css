@@ -1,13 +1,14 @@
 .play {
-    width: 100%;
+    width: 85%;
     height: 15%;
     background-color: rgba(218, 43, 133, 0.414);
     display: flex;
     justify-content: space-around;
     align-items: center;
     border-radius: 40px;
-    position: sticky;
-    z-index: 1;
+    margin-top: 40%;
+    position: fixed;
+    top: 0;
 }
 
 .player-background {
