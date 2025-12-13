@@ -12,6 +12,7 @@ let songsrc = document.getElementById("player")
 let pause = document.getElementById("pause")
 let timeelement = document.getElementById("timeelement")
 let volumeControl = document.getElementById("volume");
+let totalTime = document.getElementById("totalTime");
 
 
 let audiocontrol = document.getElementById("progress");
@@ -28,6 +29,9 @@ function playSong(index) {
     songsrc.src = playlist[currentsong].src;
     songartist.textContent = playlist[currentsong].artist;
     playAudio();
+   
+
+
 
 
 }
@@ -70,9 +74,22 @@ pause.addEventListener("click", () => {
 
 
 });
+
+songsrc.addEventListener("loadedmetadata", () => {
+    let duration = songsrc.duration;
+
+    let min = Math.floor(duration / 60);
+    let sec = Math.floor(duration % 60);
+
+    if (sec < 10) sec = "0" + sec;
+
+    totalTime.innerHTML = min + ":" + sec;
+});
 songsrc.addEventListener("timeupdate", () => {
     if (songsrc.duration) {
         let value = (songsrc.currentTime / songsrc.duration) * 100;
+        
+        
         audiocontrol.value = value;
 
         let min = Math.floor(songsrc.currentTime / 60);
@@ -80,8 +97,18 @@ songsrc.addEventListener("timeupdate", () => {
         if (sec < 10) sec = "0" + sec;
 
         timeelement.innerHTML = `${min}:${sec}`;
+
+        
     }
 });
+
+audiocontrol.addEventListener("input", () => {
+    let seekTime = (audiocontrol.value / 100) * songsrc.duration;
+    songsrc.currentTime = seekTime;
+});
+
+
+
 
 volumeControl.addEventListener("input", () => {
     songsrc.volume = volumeControl.value;
