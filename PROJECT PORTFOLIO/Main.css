@@ -54,8 +54,34 @@ h4 {
     color: aliceblue;
 }
 
+.menu-btn {
+  display: none; /* ❌ Desktop me hide */
+}
 
+@media (max-width: 768px) {
 
+  .nav-links {
+    display: none; /* ❌ Mobile me hide */
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex; /* ✅ Click par show */
+  }
+
+  .menu-btn {
+    display: block; /* ✅ Sirf mobile me show */
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+  }
+}
 
 
 

@@ -35,6 +35,9 @@ function playSong(index) {
 
 
 }
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
 
 
 let isPlaying = false;
